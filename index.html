@@ -1149,7 +1149,7 @@ const Auth = {
       google.accounts.id.initialize({
         client_id: CONFIG.GOOGLE_CLIENT_ID,
         callback: (response) => this._handleGoogleResponse(response),
-        auto_select: false
+        auto_select: true
       });
       google.accounts.id.prompt((notification) => {
         if (notification.isNotDisplayed() || notification.isSkippedMoment()) {
